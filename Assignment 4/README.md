@@ -1,0 +1,1 @@
+This repository was created as a part of the assignment at the Big Data Laboratory at IITM. This assignment demonstrates the use of MLflow on publicly available climatological data from NCEI (National Centers for Environmental Information). The primary goal was to automate the pipeline to verify the data consistency.
