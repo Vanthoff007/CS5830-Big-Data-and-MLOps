@@ -14,7 +14,7 @@ This project implements a FastAPI application that predicts handwritten digits f
 ### Prerequisites
 
 - Python 3.6 or higher
-- TensorFlow 2.x
+- TensorFlow
 - FastAPI
 - Pillow (PIL) library
 
@@ -24,3 +24,27 @@ This project implements a FastAPI application that predicts handwritten digits f
 
 ```bash
 git clone https://github.com/your-username/mnist-fastapi.git
+```
+## Usage
+
+1. Run the FastAPI application:
+```bash
+uvicorn main:app --reload
+```
+2. Open your web browser and navigate to http://localhost:8000/docs to access the Swagger UI.
+3. Upload an image containing a handwritten digit using the /predict endpoint.
+4. The API will return the predicted digit in the response.
+
+## Testing
+
+You can test the API by drawing handwritten digits using a simple image editor like MS Paint and uploading them through the Swagger UI or a tool like Postman.
+
+## Model Training
+
+The model.py file contains the code for training the MNIST model using TensorFlow and Keras. You can modify the model architecture and hyperparameters and save the trained model for use in the FastAPI application.
+
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request if you have any improvements or bug fixes.
+
+
+
