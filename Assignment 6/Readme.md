@@ -14,6 +14,7 @@ This project implements a FastAPI application that predicts handwritten digits f
 ### Prerequisites
 
 - Python 3.6 or higher
+- Pickle
 - TensorFlow
 - FastAPI
 - Pillow (PIL) library
@@ -27,17 +28,19 @@ git clone https://github.com/your-username/mnist-fastapi.git
 ```
 ## Usage
 
-1. Run the FastAPI application:
+1. First, run the model.ipynb file with the set of parameters you want. I have opted for a big neural network, however, you can also add regularization, stopping criteria, optimizer, etc.
+2. Once the run finishes, the model will be saved in the .h5 format along with the model architecture and weights at the location where the model.ipynb file is saved however it is recommended to check the location.
+3. The main.py has the code of the API. To run the FastAPI application:
 ```bash
 uvicorn main:app --reload
 ```
-2. Open your web browser and navigate to http://localhost:8000/docs to access the Swagger UI.
-3. Upload an image containing a handwritten digit using the /predict endpoint.
-4. The API will return the predicted digit in the response.
+4. In the command prompt, you get a link similar to "http://127.0.0.1:8000." copy and paste it into your web browser and navigate to "http://127.0.0.1:8000/docs" to access the Swagger UI.
+5. Upload an image containing a handwritten digit using the /predict endpoint.
+6. The API will return the predicted digit in the response.
 
 ## Testing
 
-You can test the API by drawing handwritten digits using a simple image editor like MS Paint and uploading them through the Swagger UI or a tool like Postman.
+You can test the API by drawing handwritten digits using a simple image editor like MS Paint and uploading them through the Swagger UI.
 
 ## Model Training
 
